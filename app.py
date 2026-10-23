@@ -1,96 +1,144 @@
 import streamlit as st
-import google.generativeai as genai
+from google import generativeai as genai
+import fpdf
+import tempfile
+import os
 
-# Page Config
+# Page Configuration
 st.set_page_config(
     page_title="PakExport AI — Sultan Sahi",
     page_icon="🌐",
-    layout="wide"
+    layout="wide",
+    initial_sidebar_state="expanded"
 )
 
-# Custom Styling & Header
+# Custom Styling & Professional UI
 st.markdown("""
     <style>
-    .main-title {
-        font-size: 38px;
-        font-weight: bold;
+    .main-header {
+        font-size: 2.2rem;
         color: #1E3A8A;
-        text-align: center;
-        margin-bottom: 5px;
+        font-weight: 700;
+        margin-bottom: 0px;
     }
-    .sub-title {
-        font-size: 18px;
+    .sub-header {
+        font-size: 1.1rem;
         color: #4B5563;
-        text-align: center;
-        margin-bottom: 25px;
         font-weight: 500;
+        margin-bottom: 20px;
+    }
+    .badge {
+        background-color: #EFF6FF;
+        color: #1D4ED8;
+        padding: 6px 12px;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        border: 1px solid #BFDBFE;
     }
     </style>
 """, unsafe_allow_html=True)
 
-# App Header
-st.markdown('<div class="main-title">🌐 PakExport AI</div>', unsafe_allow_html=True)
-st.markdown('<div class="sub-title">Created & Architected by <b>Sultan Sahi</b> | Global Trade Audit Engine</div>', unsafe_allow_html=True)
+# Sidebar - System Control & Configuration
+st.sidebar.markdown("### ⚙️ System Control")
+api_key_input = st.sidebar.text_input("Enter Free Gemini API Key:", type="password")
 
-st.divider()
+st.sidebar.markdown("---")
+st.sidebar.markdown("### 🏢 Enterprise Credentials")
+st.sidebar.info("**Platform Creator:** Sultan Sahi\n\n**SCCI Membership:** A-96532\n\n**Location:** Sialkot, Pakistan")
 
-# Sidebar
-with st.sidebar:
-    st.header("⚙️ System Control")
-    api_key = st.text_input("Enter Free Gemini API Key:", type="password")
-    st.divider()
-    st.header("💎 Subscription Tier")
-    st.markdown("**Current Plan:** Pay-Per-Audit ($10/audit)")
-    st.info("💡 Upgrade to SME Pro ($99/mo) for unlimited audits & verified QR badges.")
+st.sidebar.markdown("---")
+st.sidebar.markdown("### 💎 Subscription Tier")
+st.sidebar.success("**Current Plan:** Global SME Pro (Active)\n\n*Unlimited Audits & Verified QR Badges*")
 
-# Main Tabs
-tab1, tab2, tab3 = st.tabs(["📄 Document Audit", "🔍 HS-Code Verifier", "⭐ Reviews & Ratings"])
+# Main Header Section
+st.markdown('<p class="main-header">🌐 PakExport AI</p>', unsafe_allow_html=True)
+st.markdown('<p class="sub-header">Created & Architected by Sultan Sahi | Global Trade Audit Engine</p>', unsafe_allow_html=True)
+st.markdown('<span class="badge">Sialkot Chamber of Commerce & Industry (SCCI) Verified Exporter Hub</span>', unsafe_allow_html=True)
 
-# TAB 1: Document Audit
+st.markdown("---")
+
+# Tabs for Navigation
+tab1, tab2, tab3 = st.tabs(["📋 Document Audit", "🔍 HS Code Verifier", "📞 Direct B2B Inquiry"])
+
+# Initialize Gemini API if key is provided
+if api_key_input:
+    genai.configure(api_key=api_key_input)
+    model = genai.GenerativeModel('gemini-2.5-flash')
+else:
+    model = None
+
 with tab1:
-    st.subheader("1. Instant Export Document Compliance Audit")
-    doc_text = st.text_area("Paste Commercial Invoice / Packing List Details Here:", height=180, 
-                            placeholder="e.g. Exporter: Sialkot Sports Co, Product: Leather Jackets 500 pcs, HS Code: 4203.10...")
+    st.markdown("### 1. Instant Export Document Compliance Audit")
+    st.markdown("Paste your Commercial Invoice or Packing List details below for automated compliance review.")
     
+    doc_text = st.text_area("Document Details (Exporter, Buyer, Products, Quantities, HS Codes, Prices):", height=150, placeholder="e.g. Exporter: Sahi Royal Company, Sialkot. Product: Cotton Tracksuits 500 pcs, Destination: USA...")
+
     if st.button("🚀 Run Instant Audit"):
-        if not api_key:
+        if not api_key_input:
             st.error("Please enter your Gemini API Key in the sidebar first!")
         elif not doc_text.strip():
-            st.warning("Please paste document details to run the audit.")
+            st.error("Please paste your export document details.")
         else:
-            with st.spinner("Sultan Sahi Engine auditing compliance parameters..."):
+            with st.spinner("Analyzing document compliance against international trade standards..."):
                 try:
-                    genai.configure(api_key=api_key)
-                    model = genai.GenerativeModel('gemini-1.5-flash')
-                    prompt = f"You are PakExport AI, an expert customs compliance auditor created by Sultan Sahi. Audit this export document for compliance and missing fields: {doc_text}"
+                    prompt = f"Act as an expert international trade and customs compliance auditor. Review the following export document details and provide a professional audit report covering compliance, potential risks, and recommendations:\n\n{doc_text}"
                     response = model.generate_content(prompt)
-                    st.success("✅ Audit Completed Successfully!")
-                    st.markdown(response.text)
-                    st.divider()
-                    st.info("Verified Compliant | Certificate ID: **PEAI-2026-8892** | Architected by **Sultan Sahi**")
+                    audit_result = response.text
+                    
+                    st.success("Audit Completed Successfully!")
+                    st.markdown("### 📊 Audit Report")
+                    st.markdown(audit_result)
+                    
+                    # PDF Generation Function
+                    pdf = fpdf.FPDF()
+                    pdf.add_page()
+                    pdf.set_font("Arial", size=12)
+                    pdf.cell(200, 10, txt="PakExport AI - Official Trade Audit Report", ln=True, align='C')
+                    pdf.cell(200, 10, txt="Architected by Sultan Sahi (SCCI Reg: A-96532)", ln=True, align='C')
+                    pdf.ln(10)
+                    
+                    # Clean text for PDF encoding
+                    clean_text = audit_result.encode('latin-1', 'replace').decode('latin-1')
+                    pdf.multi_cell(0, 10, txt=clean_text)
+                    
+                    temp_pdf = tempfile.NamedTemporaryFile(delete=False, suffix=".pdf")
+                    pdf.output(temp_pdf.name)
+                    
+                    with open(temp_pdf.name, "rb") as f:
+                        st.download_button(
+                            label="📥 Download Official Audit Report (PDF)",
+                            data=f,
+                            file_name="PakExport_Audit_Report.pdf",
+                            mime="application/pdf"
+                        )
                 except Exception as e:
-                    st.error(f"Error executing audit: {e}")
+                    st.error(f"An error occurred: {e}")
 
-# TAB 2: HS Code Finder
 with tab2:
-    st.subheader("2. Global HS-Code & Duty Matcher")
-    product_desc = st.text_input("Enter Product Description:")
-    if st.button("🔍 Find Verified HS-Code"):
-        if not api_key:
-            st.error("Please enter your Gemini API Key in the sidebar!")
-        elif not product_desc:
-            st.warning("Please enter a product description.")
+    st.markdown("### 2. HS Code & Tariff Verifier")
+    st.markdown("Verify product classifications for sportswear, apparel, and leather goods.")
+    hs_query = st.text_input("Enter product description (e.g., Leather jackets, cotton hoodies, footballs):")
+    if st.button("🔍 Verify HS Code"):
+        if not api_key_input:
+            st.error("Please enter your Gemini API Key in the sidebar.")
+        elif not hs_query.strip():
+            st.error("Please enter a product description.")
         else:
-            with st.spinner("Matching global tariffs..."):
+            with st.spinner("Searching global trade tariffs..."):
                 try:
-                    genai.configure(api_key=api_key)
-                    model = genai.GenerativeModel('gemini-1.5-flash')
-                    res = model.generate_content(f"Provide exact HS Code and export checklist for: {product_desc}")
-                    st.markdown(res.text)
+                    prompt = f"Provide standard international HS Codes and customs guidelines for the following product manufactured in Sialkot, Pakistan: {hs_query}"
+                    response = model.generate_content(prompt)
+                    st.markdown(response.text)
                 except Exception as e:
-                    st.error(f"Error: {e}")
+                    st.error(f"An error occurred: {e}")
 
-# TAB 3: Reviews
 with tab3:
-    st.subheader("3. Verified Exporter Reviews")
-    st.success("**Sialkot Apparel Exporter** ⭐⭐⭐⭐⭐\n\n'Saved our $35,000 shipment to Hamburg!'")
+    st.markdown("### 📞 Connect with Sahi Royal Company")
+    st.markdown("Ready to place bulk orders or request custom samples (Low MOQs 20-50 pcs)?")
+    st.markdown("""
+        * **Owner & CEO:** Sultan Sahi
+        * **Business:** Sahi Royal Company (Sportswear, Apparel & Leather Goods Manufacturer)
+        * **SCCI Membership:** 9026527 / A-96532
+        * **Direct WhatsApp Support:** [Click here to chat on WhatsApp Business](https://wa.me/)
+    """)
