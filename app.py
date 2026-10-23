@@ -43,7 +43,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# Full Interactive HTML/JS Dashboard Code (Full Screen Optimized)
+# Full Interactive HTML/JS Dashboard Code (Cleaned without any citation tags)
 html_code = """
 <!DOCTYPE html>
 <html lang="en">
@@ -124,7 +124,7 @@ html_code = """
         <span class="hidden md:inline text-slate-300">PCI-DSS 3D-Secure 2.0</span>
       </div>
       <div class="flex items-center space-x-3 text-slate-400">
-        <span>Managing Director: <strong class="text-white font-semibold">Sultan Sahi</strong>[cite: 1, 2]</span>
+        <span>Managing Director: <strong class="text-white font-semibold">Sultan Sahi</strong></span>
         <span>|</span>
         <span id="liveClock" class="font-mono text-slate-300"></span>
       </div>
@@ -144,7 +144,7 @@ html_code = """
             <h1 class="text-xl font-extrabold tracking-tight text-white">PakExport <span class="text-emerald-400">AI</span></h1>
             <span class="bg-emerald-950 text-emerald-300 border border-emerald-700/50 text-[10px] font-bold px-2 py-0.5 rounded-full uppercase">Trade Portal</span>
           </div>
-          <p class="text-[11px] text-slate-400">Architected by <span class="text-slate-200 font-semibold">Sultan Sahi</span>[cite: 1, 2]</p>
+          <p class="text-[11px] text-slate-400">Architected by <span class="text-slate-200 font-semibold">Sultan Sahi</span></p>
         </div>
       </div>
 
@@ -196,12 +196,12 @@ html_code = """
               B2B Trade Compliance & Automated Card Payments
             </h1>
             <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-              Verify trade shipping documents, verify HS codes, and seamlessly activate global export subscriptions using Visa, Mastercard, or direct Habib Bank Limited (HBL) transfer[cite: 1, 2].
+              Verify trade shipping documents, verify HS codes, and seamlessly activate global export subscriptions using Visa, Mastercard, or direct Habib Bank Limited (HBL) transfer.
             </p>
             <div class="pt-2 flex flex-wrap gap-3">
               <button onclick="switchTab('pricing')" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold px-6 py-3 rounded-xl text-xs sm:text-sm shadow-xl flex items-center space-x-2 transition-all transform hover:-translate-y-0.5">
                 <i data-lucide="credit-card" class="w-4 h-4"></i>
-                <span>Subscribe via ATM Card[cite: 1, 2]</span>
+                <span>Subscribe via ATM Card</span>
               </button>
               <button onclick="switchTab('audit')" class="bg-slate-800/90 hover:bg-slate-700 text-white font-semibold border border-slate-600 px-6 py-3 rounded-xl text-xs sm:text-sm shadow-lg flex items-center space-x-2 transition">
                 <i data-lucide="file-search" class="w-4 h-4"></i>
@@ -216,7 +216,7 @@ html_code = """
               <div class="flex justify-between items-start border-b border-white/10 pb-3">
                 <div>
                   <p class="text-[10px] text-slate-400 uppercase tracking-widest font-semibold">Official Bank Account</p>
-                  <h3 class="text-base font-extrabold text-emerald-400">Habib Bank Limited (HBL)[cite: 1, 2]</h3>
+                  <h3 class="text-base font-extrabold text-emerald-400">Habib Bank Limited (HBL)</h3>
                 </div>
                 <span class="bg-emerald-500/20 text-emerald-300 text-[10px] px-2.5 py-1 rounded-full font-mono font-bold border border-emerald-500/30">Verified</span>
               </div>
@@ -224,15 +224,15 @@ html_code = """
               <div class="space-y-3 text-xs">
                 <div class="flex justify-between items-center bg-slate-900/60 p-2.5 rounded-lg border border-slate-700/50">
                   <span class="text-slate-400">Account Title:</span>
-                  <span class="font-bold text-white">Sultan Sahi[cite: 1, 2]</span>
+                  <span class="font-bold text-white">Sultan Sahi</span>
                 </div>
                 <div class="flex justify-between items-center bg-slate-900/60 p-2.5 rounded-lg border border-slate-700/50">
                   <span class="text-slate-400">Account Number:</span>
-                  <span class="font-mono font-bold text-emerald-300">11317900687003[cite: 1, 2]</span>
+                  <span class="font-mono font-bold text-emerald-300">11317900687003</span>
                 </div>
                 <div class="flex justify-between items-center bg-slate-900/60 p-2.5 rounded-lg border border-slate-700/50">
                   <span class="text-slate-400">Managing Director:</span>
-                  <span class="font-bold text-white">Sultan Sahi[cite: 1, 2]</span>
+                  <span class="font-bold text-white">Sultan Sahi</span>
                 </div>
               </div>
 
@@ -263,7 +263,7 @@ html_code = """
             <div>
               <p class="text-xs font-medium text-slate-500">Card Gateways</p>
               <h4 class="text-2xl font-black text-slate-900 mt-1">Visa & MC</h4>
-              <p class="text-[11px] text-emerald-600 font-semibold mt-1">Debit & Credit Cards[cite: 1, 2]</p>
+              <p class="text-[11px] text-emerald-600 font-semibold mt-1">Debit & Credit Cards</p>
             </div>
             <div class="bg-indigo-50 p-3 rounded-xl text-indigo-600">
               <i data-lucide="credit-card" class="w-6 h-6"></i>
@@ -284,8 +284,8 @@ html_code = """
           <div class="bg-white p-5 rounded-2xl shadow-lg border border-slate-200 flex items-center justify-between">
             <div>
               <p class="text-xs font-medium text-slate-500">Portal Director</p>
-              <h4 class="text-lg font-black text-slate-900 mt-1">Sultan Sahi[cite: 1, 2]</h4>
-              <p class="text-[11px] text-slate-500 mt-1">Habib Bank Ltd Routing[cite: 1, 2]</p>
+              <h4 class="text-lg font-black text-slate-900 mt-1">Sultan Sahi</h4>
+              <p class="text-[11px] text-slate-500 mt-1">Habib Bank Ltd Routing</p>
             </div>
             <div class="bg-amber-50 p-3 rounded-xl text-amber-600">
               <i data-lucide="user-check" class="w-6 h-6"></i>
@@ -307,7 +307,7 @@ html_code = """
         </div>
         <div class="flex items-center space-x-2">
           <span class="text-xs text-slate-500 font-medium">Managing Director:</span>
-          <span class="bg-slate-200 text-slate-800 text-xs font-bold px-3 py-1 rounded-full">Sultan Sahi[cite: 1, 2]</span>
+          <span class="bg-slate-200 text-slate-800 text-xs font-bold px-3 py-1 rounded-full">Sultan Sahi</span>
         </div>
       </div>
 
@@ -320,7 +320,7 @@ html_code = """
                 Document Input Details
               </span>
               <span id="auditLimitNotice" class="text-[10px] font-bold bg-blue-100 text-blue-800 px-2 py-0.5 rounded-full">
-                5 Free Audits Allowed[cite: 1, 2]
+                5 Free Audits Allowed
               </span>
             </h3>
 
@@ -374,13 +374,13 @@ TOTAL VALUE: USD $42,500</textarea>
             <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center mx-auto">
               <i data-lucide="lock" class="w-7 h-7"></i>
             </div>
-            <h3 class="text-xl font-extrabold text-slate-900">5 Free Audits Limit Reached![cite: 1, 2]</h3>
+            <h3 class="text-xl font-extrabold text-slate-900">5 Free Audits Limit Reached!</h3>
             <p class="text-xs text-slate-600 max-w-md mx-auto">
-              Aap ne apne 5 Free Verifications use kar liye hain. Unlimited document audits ke liye kripya subscription upgrade karein[cite: 1, 2].
+              Aap ne apne 5 Free Verifications use kar liye hain. Unlimited document audits ke liye kripya subscription upgrade karein.
             </p>
             <button onclick="switchTab('pricing')" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black px-6 py-3 rounded-xl text-xs transition shadow-lg inline-flex items-center space-x-2">
               <i data-lucide="credit-card" class="w-4 h-4"></i>
-              <span>Upgrade via ATM / Debit Card[cite: 1, 2]</span>
+              <span>Upgrade via ATM / Debit Card</span>
             </button>
           </div>
 
@@ -388,12 +388,12 @@ TOTAL VALUE: USD $42,500</textarea>
             <div id="pdfExportArea" class="p-6 bg-white rounded-xl border border-slate-200 space-y-5">
               <div class="border-b-2 border-psw-navy pb-4 flex justify-between items-start">
                 <div>
-                  <h3 class="text-lg font-black text-psw-navy">PakExport AI Portal[cite: 1, 2]</h3>
+                  <h3 class="text-lg font-black text-psw-navy">PakExport AI Portal</h3>
                   <p class="text-[11px] text-slate-500">Official Compliance & Verification Report</p>
                 </div>
                 <div class="text-right text-[11px] text-slate-600">
                   <p class="font-bold text-slate-800">Report: <span id="reportIdDisplay" class="font-mono text-psw-navy">AUD-8831</span></p>
-                  <p>Director: <strong>Sultan Sahi[cite: 1, 2]</strong></p>
+                  <p>Director: <strong>Sultan Sahi</strong></p>
                 </div>
               </div>
 
@@ -422,7 +422,7 @@ TOTAL VALUE: USD $42,500</textarea>
               </div>
 
               <div class="pt-4 border-t border-slate-200 flex justify-between items-center text-[10px] text-slate-400">
-                <p>Habib Bank Limited (HBL) Account: 11317900687003 | Sultan Sahi[cite: 1, 2]</p>
+                <p>Habib Bank Limited (HBL) Account: 11317900687003 | Sultan Sahi</p>
                 <p class="font-mono text-emerald-600 font-bold">STATUS: VERIFIED</p>
               </div>
             </div>
@@ -442,9 +442,9 @@ TOTAL VALUE: USD $42,500</textarea>
     <div id="tab-pricing" class="tab-content hidden w-full px-8 sm:px-16 py-12">
       <div class="text-center max-w-3xl mx-auto space-y-3 mb-12">
         <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-wider">Automated Payment Portal</span>
-        <h2 class="text-3xl font-black text-slate-900">Choose Plan & Pay via ATM / Credit Card[cite: 1, 2]</h2>
+        <h2 class="text-3xl font-black text-slate-900">Choose Plan & Pay via ATM / Credit Card</h2>
         <p class="text-xs sm:text-sm text-slate-500">
-          Click on any plan below to open the **Automated ATM Debit / Credit Card Payment Gateway**. Instant activation with official payout routing to Habib Bank Limited (HBL)[cite: 1, 2].
+          Click on any plan below to open the **Automated ATM Debit / Credit Card Payment Gateway**. Instant activation with official payout routing to Habib Bank Limited (HBL).
         </p>
       </div>
 
@@ -462,12 +462,12 @@ TOTAL VALUE: USD $42,500</textarea>
             <ul class="space-y-2.5 text-xs text-slate-600 pt-2">
               <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-emerald-500 mr-2"></i> Unlimited AI Audits</li>
               <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-emerald-500 mr-2"></i> PDF Audit Download</li>
-              <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-emerald-500 mr-2"></i> Instant Card Activation[cite: 1, 2]</li>
+              <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-emerald-500 mr-2"></i> Instant Card Activation</li>
             </ul>
           </div>
           <button onclick="openCheckoutModal('Starter Plan', 29)" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3.5 rounded-xl text-xs transition shadow-md flex justify-center items-center space-x-2">
             <i data-lucide="credit-card" class="w-4 h-4 text-emerald-400"></i>
-            <span>Pay $29 via ATM / Card[cite: 1, 2]</span>
+            <span>Pay $29 via ATM / Card</span>
           </button>
         </div>
 
@@ -491,7 +491,7 @@ TOTAL VALUE: USD $42,500</textarea>
           </div>
           <button onclick="openCheckoutModal('Professional Trader', 149)" class="w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black py-4 rounded-xl text-xs transition shadow-xl flex justify-center items-center space-x-2">
             <i data-lucide="zap" class="w-4 h-4"></i>
-            <span>Pay $149 via ATM / Card[cite: 1, 2]</span>
+            <span>Pay $149 via ATM / Card</span>
           </button>
         </div>
 
@@ -503,7 +503,7 @@ TOTAL VALUE: USD $42,500</textarea>
               <span class="text-4xl font-black text-slate-900">$249</span>
               <span class="text-slate-500 text-xs font-medium">/ month</span>
             </div>
-            <p class="text-xs text-slate-500 leading-relaxed">Full portal integration with dedicated advisory by Managing Director Sultan Sahi[cite: 1, 2].</p>
+            <p class="text-xs text-slate-500 leading-relaxed">Full portal integration with dedicated advisory by Managing Director Sultan Sahi.</p>
             <ul class="space-y-2.5 text-xs text-slate-600 pt-2">
               <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-emerald-500 mr-2"></i> Unlimited Everything</li>
               <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-emerald-500 mr-2"></i> Dedicated Account Advisor</li>
@@ -512,7 +512,7 @@ TOTAL VALUE: USD $42,500</textarea>
           </div>
           <button onclick="openCheckoutModal('Enterprise Global', 249)" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3.5 rounded-xl text-xs transition shadow-md flex justify-center items-center space-x-2">
             <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i>
-            <span>Pay $249 via ATM / Card[cite: 1, 2]</span>
+            <span>Pay $249 via ATM / Card</span>
           </button>
         </div>
 
@@ -521,12 +521,12 @@ TOTAL VALUE: USD $42,500</textarea>
       <div class="mt-12 bg-slate-900 text-white p-6 rounded-2xl border border-slate-800 flex flex-col md:flex-row items-center justify-between gap-6 w-full">
         <div class="space-y-1">
           <h4 class="text-sm font-bold text-emerald-400 flex items-center">
-            <i data-lucide="landmark" class="w-4 h-4 mr-2"></i> Direct Habib Bank Limited (HBL) Routing[cite: 1, 2]
+            <i data-lucide="landmark" class="w-4 h-4 mr-2"></i> Direct Habib Bank Limited (HBL) Routing
           </h4>
-          <p class="text-xs text-slate-300">All card transactions process through Merchant Account Title: <strong>Sultan Sahi[cite: 1, 2]</strong> | Account No: <strong>11317900687003[cite: 1, 2]</strong></p>
+          <p class="text-xs text-slate-300">All card transactions process through Merchant Account Title: <strong>Sultan Sahi</strong> | Account No: <strong>11317900687003</strong></p>
         </div>
         <span class="bg-slate-800 text-slate-300 border border-slate-700 px-4 py-2 rounded-xl text-xs font-mono font-bold whitespace-nowrap">
-          Habib Bank Limited (HBL)[cite: 1, 2]
+          Habib Bank Limited (HBL)
         </span>
       </div>
     </div>
@@ -554,18 +554,18 @@ TOTAL VALUE: USD $42,500</textarea>
       <div class="flex border-b border-slate-200 bg-slate-50 text-xs font-bold">
         <button id="tabBtnCard" onclick="togglePaymentTab('card')" class="flex-1 py-3 border-b-2 border-emerald-500 text-emerald-600 flex justify-center items-center space-x-2">
           <i data-lucide="credit-card" class="w-4 h-4"></i>
-          <span>ATM / Debit / Credit Card[cite: 1, 2]</span>
+          <span>ATM / Debit / Credit Card</span>
         </button>
         <button id="tabBtnHbl" onclick="togglePaymentTab('hbl')" class="flex-1 py-3 text-slate-500 hover:text-slate-800 flex justify-center items-center space-x-2">
           <i data-lucide="landmark" class="w-4 h-4"></i>
-          <span>Direct HBL Transfer[cite: 1, 2]</span>
+          <span>Direct HBL Transfer</span>
         </button>
       </div>
 
       <form id="cardPaymentForm" onsubmit="processCardPayment(event)" class="p-6 space-y-4">
         <div class="bg-gradient-to-r from-slate-900 to-psw-navy p-4 rounded-xl text-white shadow-md relative overflow-hidden space-y-3">
           <div class="flex justify-between items-center">
-            <span class="text-[10px] uppercase font-mono tracking-widest text-slate-400">Debit / Credit Card[cite: 1, 2]</span>
+            <span class="text-[10px] uppercase font-mono tracking-widest text-slate-400">Debit / Credit Card</span>
             <span id="cardTypeBadge" class="text-[10px] font-black px-2 py-0.5 rounded bg-blue-600 text-white">VISA</span>
           </div>
           <div class="flex items-center space-x-3">
@@ -578,7 +578,7 @@ TOTAL VALUE: USD $42,500</textarea>
           <div class="flex justify-between items-end text-[10px] font-mono">
             <div>
               <span class="text-slate-400 block text-[8px] uppercase">Cardholder</span>
-              <span id="cardPreviewHolder" class="font-bold text-white uppercase">SULTAN SAHI[cite: 1, 2]</span>
+              <span id="cardPreviewHolder" class="font-bold text-white uppercase">SULTAN SAHI</span>
             </div>
             <div>
               <span class="text-slate-400 block text-[8px] uppercase">Expires</span>
@@ -589,11 +589,11 @@ TOTAL VALUE: USD $42,500</textarea>
 
         <div>
           <label class="block text-xs font-bold text-slate-700 mb-1">Cardholder Full Name</label>
-          <input type="text" id="cardName" required placeholder="Sultan Sahi[cite: 1, 2]" oninput="updateCardPreview()" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 text-xs font-semibold text-slate-800 focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+          <input type="text" id="cardName" required placeholder="Sultan Sahi" oninput="updateCardPreview()" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 text-xs font-semibold text-slate-800 focus:ring-2 focus:ring-emerald-500 focus:outline-none">
         </div>
 
         <div>
-          <label class="block text-xs font-bold text-slate-700 mb-1">ATM / Debit / Credit Card Number[cite: 1, 2]</label>
+          <label class="block text-xs font-bold text-slate-700 mb-1">ATM / Debit / Credit Card Number</label>
           <input type="text" id="cardNumber" required maxlength="19" oninput="formatCardNumber(this)" placeholder="4000 1234 5678 9010" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 text-xs font-mono font-bold text-slate-800 focus:ring-2 focus:ring-emerald-500 focus:outline-none">
         </div>
 
@@ -611,7 +611,7 @@ TOTAL VALUE: USD $42,500</textarea>
         <div class="bg-emerald-50 p-3 rounded-xl border border-emerald-200 text-[11px] text-emerald-900 flex items-start space-x-2">
           <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0"></i>
           <div>
-            <p><strong>Merchant Transfer Routing:</strong> Automated payout destination Habib Bank Limited (HBL) Account: <strong>11317900687003[cite: 1, 2]</strong> (Sultan Sahi[cite: 1, 2]).</p>
+            <p><strong>Merchant Transfer Routing:</strong> Automated payout destination Habib Bank Limited (HBL) Account: <strong>11317900687003</strong> (Sultan Sahi).</p>
           </div>
         </div>
 
@@ -623,31 +623,31 @@ TOTAL VALUE: USD $42,500</textarea>
 
       <div id="hblTransferContent" class="p-6 space-y-4 hidden">
         <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-3 text-xs">
-          <h4 class="font-bold text-slate-900 border-b border-slate-200 pb-2">Habib Bank Limited (HBL) Official Transfer[cite: 1, 2]</h4>
+          <h4 class="font-bold text-slate-900 border-b border-slate-200 pb-2">Habib Bank Limited (HBL) Official Transfer</h4>
           <div class="flex justify-between">
             <span class="text-slate-500">Bank Name:</span>
-            <strong class="text-slate-800">Habib Bank Limited (HBL)[cite: 1, 2]</strong>
+            <strong class="text-slate-800">Habib Bank Limited (HBL)</strong>
           </div>
           <div class="flex justify-between">
             <span class="text-slate-500">Account Title:</span>
-            <strong class="text-slate-800">Sultan Sahi[cite: 1, 2]</strong>
+            <strong class="text-slate-800">Sultan Sahi</strong>
           </div>
           <div class="flex justify-between">
             <span class="text-slate-500">Account Number:</span>
-            <strong class="font-mono text-emerald-700">11317900687003[cite: 1, 2]</strong>
+            <strong class="font-mono text-emerald-700">11317900687003</strong>
           </div>
         </div>
         <p class="text-[11px] text-slate-500">After sending transfer, enter your transaction reference number below for manual instant activation.</p>
         <input type="text" id="hblRefNo" placeholder="Enter HBL Transaction Reference ID" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 text-xs font-mono text-slate-800 focus:ring-2 focus:ring-emerald-500 focus:outline-none">
         <button onclick="submitHblTransfer()" class="w-full bg-psw-navy hover:bg-slate-800 text-white font-bold py-3.5 rounded-xl text-xs transition shadow-lg">
-          Submit HBL Payment Reference[cite: 1, 2]
+          Submit HBL Payment Reference
         </button>
       </div>
 
       <div id="paymentProcessing" class="p-10 text-center space-y-4 hidden">
         <div class="inline-block animate-spin rounded-full h-12 w-12 border-4 border-emerald-500 border-t-transparent"></div>
         <h4 class="text-base font-bold text-slate-900">Processing Card Payment...</h4>
-        <p class="text-xs text-slate-500">Connecting to Habib Bank Limited (HBL) Gateway[cite: 1, 2]</p>
+        <p class="text-xs text-slate-500">Connecting to Habib Bank Limited (HBL) Gateway</p>
       </div>
 
       <div id="paymentSuccess" class="p-8 text-center space-y-4 hidden">
@@ -666,11 +666,11 @@ TOTAL VALUE: USD $42,500</textarea>
           </div>
           <div class="flex justify-between">
             <span class="text-slate-500">Merchant Routing:</span>
-            <strong class="text-slate-800">HBL Account 11317900687003[cite: 1, 2]</strong>
+            <strong class="text-slate-800">HBL Account 11317900687003</strong>
           </div>
           <div class="flex justify-between">
             <span class="text-slate-500">Account Title:</span>
-            <strong class="text-slate-800">Sultan Sahi[cite: 1, 2]</strong>
+            <strong class="text-slate-800">Sultan Sahi</strong>
           </div>
         </div>
         <button onclick="closeCheckoutModal()" class="w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black py-3 rounded-xl text-xs transition">
@@ -692,12 +692,12 @@ TOTAL VALUE: USD $42,500</textarea>
           <i data-lucide="ship" class="w-4 h-4"></i>
         </div>
         <div>
-          <p class="font-bold text-white">PakExport AI Portal[cite: 1, 2]</p>
-          <p class="text-[11px] text-slate-500">Architected by Sultan Sahi[cite: 1, 2]</p>
+          <p class="font-bold text-white">PakExport AI Portal</p>
+          <p class="text-[11px] text-slate-500">Architected by Sultan Sahi</p>
         </div>
       </div>
       <div class="text-center sm:text-right text-[11px] text-slate-500">
-        <p>Merchant Payout: Habib Bank Limited (HBL) | Account No: 11317900687003[cite: 1, 2]</p>
+        <p>Merchant Payout: Habib Bank Limited (HBL) | Account No: 11317900687003</p>
       </div>
     </div>
   </footer>
@@ -846,7 +846,7 @@ TOTAL VALUE: USD $42,500</textarea>
 
     function updateCardPreview() {
       const holder = document.getElementById('cardName').value;
-      document.getElementById('cardPreviewHolder').innerText = holder.trim() ? holder.toUpperCase() : 'SULTAN SAHI[cite: 1, 2]';
+      document.getElementById('cardPreviewHolder').innerText = holder.trim() ? holder.toUpperCase() : 'SULTAN SAHI';
     }
 
     function formatCardNumber(input) {
@@ -922,5 +922,5 @@ TOTAL VALUE: USD $42,500</textarea>
 </html>
 """
 
-# Render Full-Screen Fixed Component
+# Render Full-Screen Clean Component
 components.html(html_code, height=900, scrolling=True)
