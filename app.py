@@ -1,3 +1,15 @@
+import streamlit as st
+
+# Page Configuration
+st.set_page_config(
+    page_title="PakExport AI - B2B Trade & Export Portal",
+    page_icon="🌐",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
+# Custom CSS & HTML Dashboard Embedded inside Python
+st.markdown("""
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -72,7 +84,7 @@
         <span class="hidden md:inline text-slate-300">PCI-DSS 3D-Secure 2.0</span>
       </div>
       <div class="flex items-center space-x-3 text-slate-400">
-        <span>Managing Director: <strong class="text-white font-semibold">Sultan Sahi</strong></span>
+        <span>Managing Director: <strong class="text-white font-semibold">Sultan Sahi</strong>[cite: 1, 2]</span>
         <span>|</span>
         <span id="liveClock" class="font-mono text-slate-300"></span>
       </div>
@@ -903,3 +915,4 @@ TOTAL VALUE: USD $42,500</textarea>
   </script>
 </body>
 </html>
+""", unsafe_allow_html=True)
